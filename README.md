@@ -6,7 +6,7 @@ This project is meant to be used as a peer-programming Javascript mentoring exer
 
 You need [Node.js](http://nodejs.org/) installed.
 
-    $ git clone git@github.com:guardian/javascript-interview-test.git
+    $ git clone git@github.com:Ghaberis/js-mentoring.git
     $ cd javascript-interview-test
     $ npm install
 
