@@ -2,4 +2,4 @@
 * This module should return the URL of the current window as a String.
 */
 
-export default null;
+export default "hello world";
