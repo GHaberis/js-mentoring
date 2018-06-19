@@ -1,4 +1,4 @@
-# Javascript Interview Test
+# Javascript Mentoring Exercises
 
 This project is meant to be used as a peer-programming Javascript mentoring exercises for client-side developers.
 
