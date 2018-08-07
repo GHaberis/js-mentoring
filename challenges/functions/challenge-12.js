@@ -1,3 +1,3 @@
-export default () => {
-    return undefined;
+export default (calculationCallback, num) => {
+    return calculationCallback(num);
 };

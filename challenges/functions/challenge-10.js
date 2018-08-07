@@ -1,3 +1,3 @@
-export default () => {
-    return undefined;
+export default (number) => {
+    return number * 3;
 };
