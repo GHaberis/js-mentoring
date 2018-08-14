@@ -19,7 +19,7 @@ describe("Challenge #14: Arrays", () => {
         const x = 10;
         const myArray = generateArray(x);
 
-        expect(sumFirstAndLast()).toEqual(11);
+        expect(sumFirstAndLast(myArray)).toEqual(11);
     });
 
     it("Should return an array of all even numbers from a generated array", () => {
