@@ -11,14 +11,19 @@ import {
 describe("Challenge #14: Arrays", () => {
     it("Should return an array of numbers from 1 to x", () => {
         const x = 10;
-
+        expect(generateArray(x)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
         expect(generateArray(x).length).toEqual(10);
+    });
+
+    it("Should return an array of numbers from 1 to x", () => {
+        const x = 11;
+        expect(generateArray(x)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+        expect(generateArray(x).length).toEqual(11);
     });
 
     it("Should add the first and last indexes of generated array", () => {
         const x = 10;
         const myArray = generateArray(x);
-
         expect(sumFirstAndLast(myArray)).toEqual(11);
     });
 
@@ -58,8 +63,3 @@ describe("Challenge #14: Arrays", () => {
         expect(removeDuplicates(myArray)).toEqual(["Hare", "Krishna", ":-O"]);
     });
 });
-
-
-
-
-

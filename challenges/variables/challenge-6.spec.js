@@ -5,6 +5,6 @@ describe("Challenge #6: Takes a full name string and returns Surname in uppercas
     const fullName = 'Waldo Jeffers';
     const surname = challenge(fullName);
 
-    expect(contains).toEqual('JEFFERS');
+    expect(surname).toEqual('JEFFERS');
   });
 });

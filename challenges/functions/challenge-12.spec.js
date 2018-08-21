@@ -9,6 +9,10 @@ describe("Challenge #12: Should accept a callback function and a number to modif
         return num * num;
     };
 
+    const subtractCallback = (num) => {
+        return num - 1;
+    };
+
     it("should return number iterated by 1", () => {
         const result = challenge(iterateCallback, 1);
 
@@ -19,5 +23,11 @@ describe("Challenge #12: Should accept a callback function and a number to modif
         const result = challenge(squareRootCallback, 2);
 
         expect(result).toEqual(4);
+    });
+
+    it("should return number minus 1", () => {
+        const result = challenge(subtractCallback, 4);
+
+        expect(result).toEqual(3);
     });
 });
