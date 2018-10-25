@@ -23,3 +23,51 @@
   - When a user succesfully adds an item to their cart a message returns "your cart total is £X"
   - If a user tries to add an item that's out of stick the cart should prevent this and return a message saying "sorry, this item is unavailable"
 */
+
+const inventory = {
+  jeans: {
+    price: 100,
+    quantity: 2
+  },
+  shirts: {
+      price: 60,
+      quantity: 2
+  },
+  tshirts: {
+    price: 25,
+    quantity: 5
+  },
+  socks: {
+    price: 5,
+    quantity: 5
+  },
+  sunglasses: {
+    price: 50,
+    quantity: 10
+  }
+}
+
+const inventoryKeys = Object.keys(inventory)
+
+const totalInventory = () => {
+  let sum = 0;
+  inventoryKeys.forEach(key => {
+    sum += (inventory[key].price * inventory[key].quantity)
+  })
+  return sum;
+}
+
+const order1 = ["socks", "jeans", "jeans", "sunglasses"];
+const order2 = ["shirts", "jeans", "socks", "tshirts"];
+
+const totalOrder = (order) => {
+  let sumOrder = 0;
+  order.forEach(item => {
+    sumOrder += inventory[item].price + (inventory[item].price * 0.2)
+  })
+  return sumOrder;
+}
+
+console.log(totalOrder(order1));
+console.log(totalOrder(order2));
+console.log(totalInventory());
