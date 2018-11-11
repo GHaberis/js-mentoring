@@ -59,15 +59,24 @@ const totalInventory = () => {
 
 const order1 = ["socks", "jeans", "jeans", "sunglasses"];
 const order2 = ["shirts", "jeans", "socks", "tshirts"];
+const order3 = ["shirts", "tshirts"];
+const saleItems = ["socks", "jeans", "shirts", "tshirts"];
 
-const totalOrder = (order) => {
+const totalOrder = (order, isSale) => {
   let sumOrder = 0;
   order.forEach(item => {
-    sumOrder += inventory[item].price + (inventory[item].price * 0.2)
+    console.log(item, saleItems.includes(item))
+    if (isSale && saleItems.includes(item)) {
+      sumOrder += inventory[item].price + (inventory[item].price * 0.2) - (inventory[item].price * 0.3)
+    } else {
+      sumOrder += inventory[item].price + (inventory[item].price * 0.2)
+    }
   })
   return sumOrder;
 }
 
 console.log(totalOrder(order1));
-console.log(totalOrder(order2));
+console.log(totalOrder(order2, false));
+console.log(totalOrder(order2, true));
+console.log(totalOrder(order3, true));
 console.log(totalInventory());
